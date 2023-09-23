@@ -22,3 +22,6 @@
 #define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #define ENABLE_RGB_MATRIX_RAINBOW_BEACON
 #define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
+// use the state led as caps lock state
+#define LED_CAPS_LOCK_PIN 24
+#define LED_PIN_ON_STATE 0
