@@ -47,6 +47,29 @@ void keyboard_pre_init_user(void) {
   writePinHigh(24);
 }
 
+bool encoder_update_user(uint8_t index, bool clockwise) {
+    // 0 is left-half encoder,
+    // 1 is right-half encoder
+    if (index == 0) {
+        // Volume control
+        if (clockwise) {
+            tap_code(KC_VOLU);
+            tap_code(KC_VOLU);
+        } else {
+            tap_code(KC_VOLD);
+            tap_code(KC_VOLD);
+        }
+    } else if (index == 1) {
+        // Page up/Page down
+        if (clockwise) {
+            tap_code(KC_PGDN);
+        } else {
+            tap_code(KC_PGUP);
+        }
+    }
+    return false;
+}
+
 //// this is how to control what's on the display
 //bool oled_task_user() {
 //    char str[80];
