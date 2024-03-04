@@ -10,15 +10,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	),
 	[1] = LAYOUT(
 	    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                                    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-	    KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6,                                    KC_1, KC_2, KC_3, KC_4, KC_5, KC_DEL,
-	    KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12,                                 KC_6, KC_7, KC_8, KC_9, KC_0, KC_PIPE,
+	    KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5,                                        KC_1, KC_2, KC_3, KC_4, KC_5, KC_DEL,
+	    KC_TAB, KC_6, KC_7, KC_8, KC_9, KC_0,                                 KC_6, KC_7, KC_8, KC_LPRN, KC_RPRN, KC_PIPE,
 	    KC_TRNS, KC_EQL, KC_MINS, KC_UNDS, KC_LCBR, KC_RCBR, KC_TRNS,         KC_TRNS, KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, KC_TRNS,
 	                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS, MO(3), KC_TRNS, KC_TRNS, KC_TRNS
 	),
 	[2] = LAYOUT(
 	    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-	    KC_TRNS, KC_INS, KC_PSCR, KC_APP, KC_NO, KC_NO,                                           KC_PGUP, LCTL(KC_LEFT), KC_UP, LCTL(KC_RGHT), LCTL(KC_BSPC), KC_BSPC,
-	    KC_TRNS, KC_LALT, KC_LCTL, KC_LSFT, KC_NO, KC_CAPS,                                       KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_DEL, KC_BSPC,
+	    KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6,                                                 KC_PGUP, LCTL(KC_LEFT), KC_UP, LCTL(KC_RGHT), LCTL(KC_BSPC), KC_BSPC,
+	    KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12,                                              KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_DEL, KC_BSPC,
 	    KC_TRNS, LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), KC_NO, KC_TRNS,         KC_TRNS, KC_NO, KC_HOME, KC_NO, KC_END, KC_NO, KC_TRNS,
 	                                  KC_TRNS, KC_TRNS, KC_TRNS, MO(3), KC_TRNS,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
 	),
