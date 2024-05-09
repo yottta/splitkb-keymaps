@@ -89,27 +89,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /*
  * Sym Layer: Numbers and symbols
- * 
- * Dvorak layer: '",<.>;:-_`~
- * QWERTY layer: ,<.>/?`~"':;
- * Common two layers: ,<.>:;'"`~
- * Different between layers: QWERTY: /? Dvorak: -_
  * All: !@#$%^&*() `~ /\:;[]{}=+-_ '",<.>|?
  * ,-------------------------------------------.                              ,-------------------------------------------.
  * |   ESC  |  1   |  2   |  3   |  4   |  5   |                              |   !  |  @   |  #   |  $   |  %   |   DEL  |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |   TAB  |  6   |  7   |  8   |  9   |  0   |                              |   ^  |  &   |  *   |  (   |  )   |   =    |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |  SHIFT |   \  |  -   | COPY |PASTE |  [   |  =   |      |  |      |      |   [  |  ]   |  ,   |  .   |  /   |   \    |
+ * |  SHIFT |   =  |  -   | COPY |PASTE |  [   |  =   |      |  |      |      |   [  |  ]   |  ,   |  .   |  /   |   \    |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_SYM] = LAYOUT(
-	    KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5,                                                     KC_1, KC_2, KC_3, KC_4, KC_5, KC_DEL,
-	    KC_TAB, KC_6, KC_7, KC_8, KC_9, KC_0,                                                     KC_6, KC_7, KC_8, KC_LPRN, KC_RPRN, KC_PIPE,
-	    KC_LSFT, KC_EQL, KC_MINS, COPY, PASTE, KC_RCBR, KC_TRNS,_______,       _______, KC_TRNS, KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, KC_SLSH,
+	    KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5,                                                     KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_DEL,
+	    KC_TAB, KC_6, KC_7, KC_8, KC_9, KC_0,                                                     KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_EQL,
+	    KC_LSFT, KC_EQL, KC_MINS, COPY, PASTE, KC_COLN, KC_TRNS,_______,       _______, KC_TRNS, KC_LBRC, KC_RBRC, KC_COMMA, KC_DOT, KC_SLSH, KC_BSLS,
 	                     KC_ENT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,               KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     ),
 
