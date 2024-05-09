@@ -34,6 +34,9 @@ enum layers {
 #define FKEYS    MO(_FUNCTION)
 #define ADJUST   MO(_ADJUST)
 
+#define COPY LCTL(KC_C)
+#define PASTE LCTL(KC_V)
+
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
@@ -86,13 +89,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /*
  * Sym Layer: Numbers and symbols
- *
+ * 
+ * Dvorak layer: '",<.>;:-_`~
+ * QWERTY layer: ,<.>/?`~"':;
+ * Common two layers: ,<.>:;'"`~
+ * Different between layers: QWERTY: /? Dvorak: -_
+ * All: !@#$%^&*() `~ /\:;[]{}=+-_ '",<.>|?
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |    `   |  1   |  2   |  3   |  4   |  5   |                              |   6  |  7   |  8   |  9   |  0   |   =    |
+ * |   ESC  |  1   |  2   |  3   |  4   |  5   |                              |   !  |  @   |  #   |  $   |  %   |   DEL  |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |    ~   |  !   |  @   |  #   |  $   |  %   |                              |   ^  |  &   |  *   |  (   |  )   |   +    |
+ * |   TAB  |  6   |  7   |  8   |  9   |  0   |                              |   ^  |  &   |  *   |  (   |  )   |   =    |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |    |   |   \  |  :   |  ;   |  -   |  [   |  {   |      |  |      |   }  |   ]  |  _   |  ,   |  .   |  /   |   ?    |
+ * |  SHIFT |   \  |  -   | COPY |PASTE |  [   |  =   |      |  |      |      |   [  |  ]   |  ,   |  .   |  /   |   \    |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        |      |      |      |      |      |  |      |      |      |      |      |
@@ -101,8 +109,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_SYM] = LAYOUT(
 	    KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5,                                                     KC_1, KC_2, KC_3, KC_4, KC_5, KC_DEL,
 	    KC_TAB, KC_6, KC_7, KC_8, KC_9, KC_0,                                                     KC_6, KC_7, KC_8, KC_LPRN, KC_RPRN, KC_PIPE,
-	    KC_TRNS, KC_EQL, KC_MINS, KC_UNDS, KC_LCBR, KC_RCBR, KC_TRNS,_______,       _______, KC_TRNS, KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, KC_SLSH,
-	                     KC_ENT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,               KC_TRNS, ADJUST, KC_TRNS, KC_TRNS, KC_TRNS
+	    KC_LSFT, KC_EQL, KC_MINS, COPY, PASTE, KC_RCBR, KC_TRNS,_______,       _______, KC_TRNS, KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, KC_SLSH,
+	                     KC_ENT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,               KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     ),
 
 /*
@@ -155,7 +163,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |Ctrl/Esc|   A  |   O  |   E  |   U  |   I  |                              |   D  |   H  |   T  |   N  |   S  |Ctrl/- _|
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * | LShift | ; :  |   Q  |   J  |   K  |   X  | [ {  | Mute |  | N/A  |  ] } |   B  |   M  |   W  |   V  |   Z  | RShift |
+ * | LShift | ; :  |   Q  |   J  |   K  |   X  | [ {  | Mute |  | N/A  |  ] } |   B  |   M  |   W  |   V  |   Z  |   `    |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        |Adjust| LGUI | LAlt/| Space| Nav  |  | Sym  | Space| AltGr| RGUI | Menu |
  *                        |      |      | Enter|      |      |  |      |      |      |      |      |
@@ -164,7 +172,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_DVORAK] = LAYOUT(
      KC_ESC ,KC_QUOTE,KC_COMM,  KC_DOT,   KC_P ,   KC_Y ,                                        KC_F,   KC_G ,  KC_C ,   KC_R ,  KC_L , KC_BSPC,
      KC_TAB, KC_A ,  KC_O   ,  KC_E  ,   KC_U ,   KC_I ,                                        KC_D,   KC_H ,  KC_T ,   KC_N ,  KC_S  , KC_MINS,
-     KC_LSFT ,KC_SCLN, KC_Q   ,  KC_J  ,   KC_K ,   KC_X , KC_LBRC,KC_MUTE,     _______, KC_RBRC, KC_B,   KC_M ,  KC_W ,   KC_V ,  KC_Z , KC_RSFT,
+     KC_LSFT ,KC_SCLN, KC_Q   ,  KC_J  ,   KC_K ,   KC_X , KC_LBRC,KC_MUTE,     _______, KC_RBRC, KC_B,   KC_M ,  KC_W ,   KC_V ,  KC_Z , KC_GRV,
                                 KC_LGUI,  KC_LALT, KC_LCTL , KC_SPC , SYM   ,     NAV    , KC_ENT ,KC_RALT, FKEYS , ADJUST
     ),
 
