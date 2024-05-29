@@ -180,9 +180,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         // Volume control
         if (clockwise) {
             tap_code(KC_VOLU);
-            tap_code(KC_VOLU);
         } else {
-            tap_code(KC_VOLD);
             tap_code(KC_VOLD);
         }
     } else if (index == 1) {
@@ -210,7 +208,7 @@ bool oled_task_user(void) {
         // clang-format on
 
         oled_write_P(qmk_logo, false);
-        oled_write_P(PSTR("Kyria rev1.0\n\n"), false);
+        oled_write_P(PSTR("Kyria rev3.0\n\n"), false);
 
         // Host Keyboard Layer Status
         oled_write_P(PSTR("Layer: "), false);
