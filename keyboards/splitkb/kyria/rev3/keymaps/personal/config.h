@@ -1,4 +1,4 @@
-/* Copyright 2022 Thomas Baart <thomas@splitkb.com>
+/* Copyright 2023 splitkb.com <support@splitkb.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,22 +16,17 @@
 
 #pragma once
 
-#ifdef RGBLIGHT_ENABLE
-#    define RGBLIGHT_EFFECT_BREATHING
-#    define RGBLIGHT_EFFECT_RAINBOW_MOOD
-#    define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-#    define RGBLIGHT_EFFECT_SNAKE
-#    define RGBLIGHT_EFFECT_KNIGHT
-#    define RGBLIGHT_EFFECT_CHRISTMAS
-#    define RGBLIGHT_EFFECT_STATIC_GRADIENT
-#    define RGBLIGHT_EFFECT_RGB_TEST
-#    define RGBLIGHT_EFFECT_ALTERNATING
-#    define RGBLIGHT_EFFECT_TWINKLE
-#    define RGBLIGHT_HUE_STEP 8
-#    define RGBLIGHT_SAT_STEP 8
-#    define RGBLIGHT_VAL_STEP 8
-#    ifndef RGBLIGHT_LIMIT_VAL
-#    	define RGBLIGHT_LIMIT_VAL 150
-#    endif
-#endif
-
+#define RGB_DISABLE_WHEN_USB_SUSPENDED
+// #define RGB_MATRIX_KEYPRESSES
+// use the state led as caps lock state
+#define LED_CAPS_LOCK_PIN 24
+#define LED_PIN_ON_STATE 0
+#define RGB_MATRIX_SLEEP
+#define RGB_MATRIX_KEYPRESSES
+#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
+#define ENABLE_RGB_MATRIX_SOLID_SPLASH
+#define ENABLE_RGB_MATRIX_RAINBOW_BEACON
+#define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
+#define TAPPING_TERM 100
+#define ENCODER_RESOLUTION 2
+//#define KEYBOARD_splitkb_kyria_rev3
