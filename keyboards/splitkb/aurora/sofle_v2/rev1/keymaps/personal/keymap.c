@@ -53,8 +53,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_ADJUST] = LAYOUT(
 	KC_NO, SWITCH_TO_WIN, SWITCH_TO_MAC, KC_NO, KC_NO, KC_NO, /* ---- */ KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
 	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, /* ---- */ KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-	KC_NO, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, KC_NO, /* ---- */ KC_NO, KC_VOLD, KC_MUTE, KC_VOLU, KC_NO, KC_NO,
-	KC_NO, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, KC_NO, KC_NO, /* ---- */ KC_NO, KC_NO, KC_MPRV, KC_MPLY, KC_MNXT, KC_NO, KC_NO,
+	KC_NO, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, RGB_TOG, /* ---- */ KC_NO, KC_VOLD, KC_MUTE, KC_VOLU, KC_NO, KC_NO,
+	KC_NO, RGB_RMOD, RGB_HUD, RGB_SAD, RGB_VAD, KC_NO, KC_NO, /* ---- */ KC_NO, KC_NO, KC_MPRV, KC_MPLY, KC_MNXT, KC_NO, KC_NO,
 	KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, /* ---- */ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     ),
 };
@@ -99,23 +99,13 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 }
 
 void render_custom_layers(void) {
-    // char str[80];
-    // sprintf(str, "%d", default_layer_state);
-    //sprintf(str, "%d    %08x", default_layer_state, layer_state);
-    // oled_write_P(PSTR(str), false);
-
-    // oled_write_P(PSTR(" "), false);
     oled_write_P(PSTR(" W"), default_layer_state == _WIN + 1);
-    // oled_write_P(PSTR(" "), false);
     oled_write_P(PSTR(" M"), default_layer_state == _MAC + 1);
     oled_write_P(PSTR("\n"), false);
 
-    // oled_write_P(PSTR(" "), false);
     oled_write_P(PSTR(">S"), layer_state_is(_SYM));
     oled_write_P(PSTR(" "), false);
     oled_write_P(PSTR(">N"), layer_state_is(_NAV));
-    // oled_write_P(PSTR("\n"), false);
-    // oled_write_P(PSTR(" "), false);
     oled_write_P(PSTR(">F"), layer_state_is(_FUNCTIONS));
     oled_write_P(PSTR(" "), false);
     oled_write_P(PSTR(">A"), layer_state_is(_ADJUST));
@@ -128,6 +118,7 @@ void _render_space(void) {
 
 void _render_logo_text(void) {
     oled_write_P(PSTR("sofle"), false);
+    oled_write_P(PSTR(" V2  "), false);
 }
 
 void _render_kb_LED_state(void) {
