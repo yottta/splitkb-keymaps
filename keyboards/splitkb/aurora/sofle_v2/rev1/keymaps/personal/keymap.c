@@ -18,36 +18,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, /* ---- */ KC_6, KC_7, KC_8, KC_9, KC_0, KC_DEL,
 	KC_GRV, KC_Q, KC_W, KC_E, KC_R, KC_T, /* ---- */ KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSPC,
 	KC_TAB, KC_A, KC_S, KC_D, KC_F, KC_G, /* ---- */ KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT,
-	KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_MUTE, /* ---- */ KC_NO, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
-	KC_LCTL, KC_LALT, KC_LGUI, KC_SPC, MO(_SYM), /* ---- */ MO(_NAV), KC_ENT, KC_RCTL, KC_RALT, MO(_FUNCTIONS)
+	KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_MUTE, /* ---- */ XXXXXXX, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
+	KC_LALT, KC_LCTL, KC_LGUI, KC_SPC, MO(_SYM), /* ---- */ MO(_NAV), KC_ENT, KC_RCTL, KC_RALT, MO(_FUNCTIONS)
     ),
     [_WIN] = LAYOUT(
 	KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, /* ---- */ KC_6, KC_7, KC_8, KC_9, KC_0, KC_DEL,
 	KC_GRV, KC_Q, KC_W, KC_E, KC_R, KC_T, /* ---- */ KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSPC,
 	KC_TAB, KC_A, KC_S, KC_D, KC_F, KC_G, /* ---- */ KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT,
-	KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_MUTE, /* ---- */ KC_NO, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
+	KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_MUTE, /* ---- */ XXXXXXX, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
 	KC_LGUI, KC_LALT, KC_LCTL, KC_SPC, MO(_SYM), /* ---- */ MO(_NAV), KC_ENT, KC_RCTL, KC_RALT, MO(_FUNCTIONS)
     ),
- //    [_SYM] = LAYOUT(
-	// KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, /* ---- */ KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11,
-	// KC_ESC, KC_NO, KC_NO, KC_4, KC_5, KC_6, /* ---- */ KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_DEL,
-	// KC_TRNS, KC_NO, KC_0, KC_1, KC_2, KC_3, /* ---- */ KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_PIPE,
-	// KC_TRNS, KC_EQL, KC_MINS, KC_7, KC_8, KC_9, KC_TRNS, /* ---- */ KC_TRNS, KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, KC_TRNS,
-	// KC_TRNS, KC_ENT, KC_TRNS, KC_TRNS, KC_TRNS, /* ---- */ MO(_ADJUST), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
- //    ),
     [_SYM] = LAYOUT(
-	KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, /* ---- */ KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11,
-	KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, /* ---- */ KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_DEL,
-	KC_TRNS, KC_6, KC_7, KC_8, KC_9, KC_0, /* ---- */ KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_PIPE,
-	KC_TRNS, KC_EQL, KC_MINS, KC_UNDS, KC_LCBR, KC_RCBR, KC_TRNS, /* ---- */ KC_TRNS, KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, KC_TRNS,
-	KC_TRNS, KC_ENT, KC_TRNS, KC_TRNS, KC_TRNS, /* ---- */ MO(_ADJUST), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+	_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, /* ---- */ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+	_______, KC_1, KC_2, KC_3, KC_4, KC_5, /* ---- */ KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_DEL,
+	_______, KC_6, KC_7, KC_8, KC_9, KC_0, /* ---- */ KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_PIPE,
+	_______, KC_EQL, KC_MINS, KC_UNDS, KC_LCBR, KC_RCBR, _______, /* ---- */ _______, KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, _______,
+	_______, KC_ENT, _______, _______, _______, /* ---- */ MO(_ADJUST), _______, _______, _______, _______
     ),
     [_NAV] = LAYOUT(
-	KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, /* ---- */ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-	KC_TRNS, KC_INS, KC_PSCR, KC_APP, KC_NO, KC_NO, /* ---- */ KC_PGUP, LCTL(KC_LEFT), KC_UP, LCTL(KC_RGHT), LCTL(KC_BSPC), KC_BSPC,
-	KC_TRNS, KC_LALT, KC_LCTL, KC_LSFT, KC_NO, KC_CAPS, /* ---- */ KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_DEL, KC_BSPC,
-	KC_TRNS, LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), KC_NO, KC_TRNS, /* ---- */ KC_TRNS, KC_NO, KC_HOME, KC_NO, KC_END, KC_NO, KC_TRNS,
-	KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MO(_ADJUST), /* ---- */ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+	_______, _______, _______, _______, _______, _______, /* ---- */ _______, _______, _______, _______, _______, _______,
+	_______, KC_INS, KC_PSCR, KC_APP, XXXXXXX, KC_CAPS, /* ---- */ KC_PGUP, RAG(KC_LEFT), KC_UP, RAG(KC_RGHT), LCTL(KC_BSPC), _______,
+	_______, XXXXXXX, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX, /* ---- */ KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_DEL, KC_BSPC,
+	_______, LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), XXXXXXX, _______, /* ---- */ _______, XXXXXXX, KC_HOME, XXXXXXX, KC_END, XXXXXXX, _______,
+	_______, _______, _______, _______, MO(_ADJUST), /* ---- */ _______, _______, _______, _______, _______
     ),
     [_FUNCTIONS] = LAYOUT(
 	_______,  _______ ,  _______,  _______,  _______, _______, /* ---- */ _______, _______, _______, _______, _______, _______,
@@ -57,11 +50,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	_______, _______, _______, _______, _______, /* ---- */ _______, _______, _______, _______, _______
     ),
     [_ADJUST] = LAYOUT(
-	KC_NO, SWITCH_TO_WIN, SWITCH_TO_MAC, KC_NO, KC_NO, KC_NO, /* ---- */ KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, /* ---- */ KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-	KC_NO, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, RGB_TOG, /* ---- */ KC_NO, KC_VOLD, KC_MUTE, KC_VOLU, KC_NO, KC_NO,
-	KC_NO, RGB_RMOD, RGB_HUD, RGB_SAD, RGB_VAD, KC_NO, KC_NO, /* ---- */ KC_NO, KC_NO, KC_MPRV, KC_MPLY, KC_MNXT, KC_NO, KC_NO,
-	KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, /* ---- */ KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+	XXXXXXX, SWITCH_TO_WIN, SWITCH_TO_MAC, XXXXXXX, XXXXXXX, XXXXXXX, /* ---- */ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+	XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, /* ---- */ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+	XXXXXXX, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, RGB_TOG, /* ---- */ XXXXXXX, KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX,
+	XXXXXXX, RGB_RMOD, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX, /* ---- */ XXXXXXX, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX,
+	_______, _______, _______, _______, _______, /* ---- */ _______, _______, _______, _______, _______
     ),
 };
 
@@ -88,9 +81,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 	// Volume control
 	if (clockwise) {
 	    tap_code(KC_VOLU);
-	    tap_code(KC_VOLU);
 	} else {
-	    tap_code(KC_VOLD);
 	    tap_code(KC_VOLD);
 	}
     } else if (index == 1) {
